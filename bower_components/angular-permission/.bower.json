@@ -1,0 +1,49 @@
+{
+  "name": "angular-permission",
+  "version": "2.1.2",
+  "authors": [
+    "Rafael Vidaurre <narzerus@gmail.com>"
+  ],
+  "contributors": [
+    "Blazej Krysiak <blazej.krysiak@gmail.com>"
+  ],
+  "description": "Route permission and access control as simple as it can get",
+  "main": "dist/angular-permission.js",
+  "keywords": [
+    "angular",
+    "permissions",
+    "roles",
+    "route"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.rafaelvidaurre.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "config",
+    "test",
+    "src",
+    "Gruntfile.js",
+    ".jshintrc",
+    ".gitignore",
+    ".travis.yml"
+  ],
+  "devDependencies": {
+    "angular-mocks": "*"
+  },
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-ui-router": "^0.2.0"
+  },
+  "_release": "2.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.2",
+    "commit": "3ba0f5f181bcca56774362fc3fe7835d48a23346"
+  },
+  "_source": "git://github.com/Narzerus/angular-permission.git",
+  "_target": "~2.1.2",
+  "_originalSource": "angular-permission",
+  "_direct": true
+}

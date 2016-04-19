@@ -1,0 +1,25 @@
+<div data-ng-repeat="article in articles track by $index">
+    <div class="widget-container">
+        <div data-ui-profile-card-sm
+             data-user="{{ article.author }}"
+             data-article-date="{{ article.humanCreatedAt }}"
+             data-view-count="{{ article.viewCount }}"
+             class="padded"></div>
+
+        <a data-ng-if="article.image" data-ui-sref="app.article({ username: article.author.username, articleSlug: article.slug })">
+            <img data-ng-src="/images/uploads/{{ article.image.createdAt }}/md-{{ article.image.path }}"
+                 title="{{ article.title }}"
+                 class="img-responsive long-image">
+        </a>
+
+        <div class="padded" data-ng-class="{'topnotpadded': !article.image}">
+            <a data-ui-sref="app.article({ username: article.author.username, articleSlug: article.slug })">
+                <h3 data-ng-bind-html="article.title"></h3>
+
+                <p data-ng-bind-html="article.body | shorten:true:200" class="reg curly"></p>
+            </a>
+
+            <div data-hearts data-count="{{ article.likeCount }}" id="{{ article.id }}"></div>
+        </div>
+    </div>
+</div>

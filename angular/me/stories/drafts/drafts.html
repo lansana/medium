@@ -1,0 +1,31 @@
+<div class="padded">
+    <div data-ng-show="vm.drafts.length > 0" data-ng-repeat="draft in vm.drafts">
+        <a data-ui-sref="app.edit({ username: draft.author.username, articleSlug: draft.slug, draft: true, title: draft.title, body: draft.body, categories: draft.categories })">
+            <h4>{{ draft.title }}</h4>
+        </a>
+
+        <div class="tiny-description">
+            Last edited {{ draft.humanUpdatedAt }}
+
+            &mdash;
+
+            <a data-ui-sref="app.edit({ username: draft.author.username, articleSlug: draft.slug, draft: true, title: draft.title, body: draft.body, categories: draft.categories })">
+                Edit
+            </a>
+
+            &mdash;
+
+            <a href data-ng-click="vm.forceDelete(draft.slug)">
+                Delete
+            </a>
+        </div>
+
+        <hr>
+    </div>
+
+    <div data-ng-hide="vm.drafts.length > 0">
+        <div class="empty-item text-center">
+            {{ vm.message }}
+        </div>
+    </div>
+</div>

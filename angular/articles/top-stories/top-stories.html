@@ -1,0 +1,21 @@
+<div class="top-stories">
+    <ul class="list-unstyled">
+        <li class="story" data-ng-repeat="article in articles track by $index">
+            <div class="story--number">
+                {{ $index + 1 }}
+            </div>
+
+            <div class="story--content">
+                <a data-ui-sref="app.article({ username: article.author.username, articleSlug: article.slug })"
+                   title="View story #{{ $index + 1 }}: {{ article.title }}">
+                    <p class="nomargin" data-ng-bind-html="article.title | shorten:false:45"></p>
+                </a>
+
+                <a data-ui-sref="app.profile({ username: article.author.username })"
+                   title="Visit {{ article.author.name }}'s profile">
+                    <small>{{ article.author.name }}</small>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

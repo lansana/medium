@@ -1,0 +1,68 @@
+<div data-ui-nav-scroll class="navbar navbar-fixed-top scroll-hide">
+    <div class="top-bar-container">
+        <div class="container-fluid top-bar" data-ng-class="{'boxed-layout': vm.addBoxedLayout}">
+            <a class="logo" data-ui-sref="app.home">BrainFocal</a>
+
+            <div class="navbar-profile">
+                <ul data-ng-if="!currentUser" class="nav navbar-nav pull-right">
+                    <li class="write-something hidden-xs">
+                        <a data-ui-sref="app.write">Write a story</a>
+                    </li>
+                    <li>
+                        <a data-ui-sref="app.signup" class="navbar-auth">Sign Up</a>
+                    </li>
+                    <li>
+                        <a data-ui-sref="app.login" class="navbar-auth">Log In</a>
+                    </li>
+                    <li class="user-icon">
+                        <a data-ui-sref="app.search" class="search-icon ring circle">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul data-ng-if="currentUser" class="nav navbar-nav pull-right">
+                    <li class="user-icon">
+                        <a data-ui-sref="app.search" class="search-icon ring circle">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown user-icon">
+                        <img data-toggle="dropdown" class="avatar sm ring circle link" data-ng-src="{{ currentUser.profileImage }}" alt="Visit your profile">
+
+                        <ul class="dropdown-menu">
+                            <li class="hidden-xs">
+                                <a data-ui-sref="app.write">
+                                    Write a story
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ui-sref="app.me.stories">
+                                    Drafts and stories
+                                </a>
+                            </li>
+                            <li>
+                                <hr>
+                            </li>
+                            <li>
+                                <a data-ui-sref="app.profile({ username: currentUser.username })" class="sm">
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ui-sref="app.me.settings" class="sm">
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ui-sref="app.logout" class="sm">
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

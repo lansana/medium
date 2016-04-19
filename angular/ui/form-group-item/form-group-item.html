@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="form-group">
+        <div class="col-sm-4 col-md-3">
+            <label for="{{ id }}">{{ label }}</label>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div data-ng-show="vm.submit" class="input-group">
+                <input data-ng-if="input"
+                       class="form-control"
+                       type="{{ type }}"
+                       id="{{ id }}"
+                       data-ng-model="vm.model"
+                       data-ng-class="{'has-error-input': vm.errors[id] || vm.errors.denied}">
+
+                <textarea data-ng-if="textarea"
+                          class="form-control"
+                          rows="3"
+                          id="{{ id }}"
+                          data-ng-model="vm.model"
+                          data-ng-class="{'has-error-input': vm.errors[id] || vm.errors.denied}"></textarea>
+
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit" data-ng-click="vm.submit()">
+                        Save
+                    </button>
+                </span>
+            </div>
+
+            <div data-ng-hide="vm.submit">
+                <input data-ng-if="input"
+                       class="form-control"
+                       type="{{ type }}"
+                       id="{{ id }}"
+                       data-ng-model="vm.model"
+                       data-ng-class="{'has-error-input': vm.errors[id] || vm.errors.denied}">
+
+                <textarea data-ng-if="textarea"
+                          class="form-control"
+                          rows="3"
+                          id="{{ id }}"
+                          data-ng-model="vm.model"
+                          data-ng-class="{'has-error-input': vm.errors[id] || vm.errors.denied}"></textarea>
+            </div>
+
+            <div data-ng-repeat="error in vm.errors[id]">
+                <p class="has-error">{{ error.toString() }}</p>
+            </div>
+        </div>
+    </div>
+</div>

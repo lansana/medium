@@ -1,0 +1,18 @@
+<div class="slideExpandUp">
+    <h3 class="text-center">{{ modalOptions.headerText }}</h3>
+
+    <p class="text-center">{{ modalOptions.bodyText }}</p>
+
+    <ul class="list-inline text-center">
+        <li>
+            <button class="btn btn-primary btn-lg" ng-click="modalOptions.ok()">
+                {{ modalOptions.actionButtonText || 'Continue' }}
+            </button>
+        </li>
+        <li>
+            <button class="btn btn-primary btn-inverse btn-lg" ng-click="modalOptions.close()">
+                {{ modalOptions.closeButtonText || 'Cancel' }}
+            </button>
+        </li>
+    </ul>
+</div>

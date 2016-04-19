@@ -1,0 +1,32 @@
+<div class="boxed-layout write">
+    <div class="row">
+        <div class="col-sm-12">
+            <input data-ui-focus data-ng-model="vm.data.title" type="text" class="invisible-input lg" placeholder="Title"
+                   data-ng-class="{'shake': vm.errors.title}">
+
+            <div class="editor" data-ng-class="{'shake': vm.errors.body}">
+                <textarea data-editor data-ng-model="vm.data.body"></textarea>
+            </div>
+
+            <div class="category-search-container">
+                <ul class="list-inline">
+                    <li class="category-search-item" data-ng-repeat="category in vm.categoriesSelected track by $index">
+                        {{ category.name }} <i class="fa fa-times link" data-ng-click="vm.removeCategory(category.id)"></i>
+                    </li>
+                    <li>
+                        <input type="text" class="invisible-input xs" placeholder="Add a category..." data-ng-model="vm.q">
+                    </li>
+                </ul>
+
+                <div data-ng-show="vm.categoriesFromSearch.length > 0">
+                    <div data-ng-repeat="category in vm.categoriesFromSearch" class="category-search-item link ring"
+                         data-ng-click="vm.addCategory(category)">
+                        {{ category.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href data-ng-click="vm.submit()" class="publish-article ring text-center">Publish</a>

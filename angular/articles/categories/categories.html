@@ -1,0 +1,9 @@
+<div data-ng-show="categories.length > 0" class="categories-container" data-ng-class="{'inverse': inverse}">
+    <div class="clearfix">
+        <a data-ng-repeat="category in categories"
+           data-ui-sref="app.category({ categorySlug: category.slug })"
+           title="View articles in {{ category.name }}">
+            {{ category.name }}
+        </a>
+    </div>
+</div>

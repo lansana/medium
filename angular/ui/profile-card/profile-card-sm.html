@@ -1,0 +1,18 @@
+<div class="profile-card">
+    <div class="card-image">
+        <a data-ui-sref="app.profile({ username: username })" data-tooltips data-tooltip-template="{{ hoverTemplate }}"
+           data-tooltop-hide-trigger="mouseleave">
+            <img class="avatar sm" data-ng-src="{{ profileImage }}" alt="Go to the profile of {{ name }}" width="47" height="47">
+        </a>
+    </div>
+    <div class="feed-summary">
+        <div class="card-name sm">
+            <a data-ui-sref="app.profile({ username: username })" title="Go to the profile of {{ name }}">
+                {{ name }}
+            </a>
+        </div>
+        <div class="tiny-description">
+            {{ date }} &mdash; Read by {{ viewCount }} others
+        </div>
+    </div>
+</div>

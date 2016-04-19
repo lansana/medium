@@ -1,0 +1,5 @@
+<div class="subview-menu">
+    <div class="subview-menu--item" ng-repeat="tab in vm.menu" ng-class="{'active': tab.selected}" ng-click="vm.go(tab)">
+        <a href>{{ tab.label }}</a>
+    </div>
+</div>

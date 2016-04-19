@@ -1,0 +1,53 @@
+<div class="widget-container widget-container--auth">
+    <div data-ui-widget-header title="Sign up for free"></div>
+
+    <div class="widget-content padded">
+        <form novalidate>
+            <div class="form-group">
+                <input class="form-control full-width" type="text" placeholder="First and last name" data-ng-model="vm.name"
+                       data-ng-class="{'has-error-input': vm.errors.name}">
+
+                <div data-ng-repeat="error in vm.errors.name">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control full-width" type="email" placeholder="Email address" data-ng-model="vm.email"
+                       ng-class="{'has-error-input': vm.errors.email}">
+
+                <div data-ng-repeat="error in vm.errors.email">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control full-width" type="password" placeholder="Select a password" data-ng-model="vm.password"
+                       data-ng-class="{'has-error-input': vm.errors.password}">
+
+                <div data-ng-repeat="error in vm.errors.password">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control full-width" type="password" placeholder="Repeat your password" data-ng-model="vm.passwordConfirmation"
+                       data-ng-class="{'has-error-input': vm.errors.passwordConfirmation}">
+
+                <div data-ng-repeat="error in vm.errors.passwordConfirmation">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <br>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" data-ng-click="vm.signup()">
+                Let's get started
+            </button>
+        </form>
+    </div>
+
+    <div class="widget-footer padded">
+        Already have an account? <a href data-ui-sref="app.login">Log in now &raquo;</a>
+    </div>
+</div>

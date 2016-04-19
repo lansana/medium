@@ -1,0 +1,9 @@
+<div class="single-column-layout padded">
+    <h1>Sorry, but nothing exists here.</h1>
+    <p class="reg" data-ng-if="vm.message">{{ vm.message }}</p>
+    <p class="reg">Find something <a data-ui-sref="app.home">interesting to read</a>, or search below.</p>
+
+    <form data-ng-submit="vm.search()">
+        <input data-ui-focus type="text" data-ng-model="vm.q" placeholder="Search" class="invisible-input sm">
+    </form>
+</div>

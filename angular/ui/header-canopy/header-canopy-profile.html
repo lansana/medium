@@ -1,0 +1,24 @@
+<div class="header-canopy">
+    <div class="single-column-layout">
+        <div class="clearfix hidden-xs">
+            <ul class="list-inline">
+                <li class="pull-left">
+                    <h2 class="text-left">{{ name }}</h2>
+                    <p class="reg">{{ bio }}</p>
+                </li>
+                <li class="pull-right">
+                    <img ng-src="{{ profileImage }}" alt="{{ name }}" class="avatar lg">
+                </li>
+            </ul>
+        </div>
+
+        <div class="text-center hidden-sm hidden-md hidden-lg">
+            <img ng-src="{{ profileImage }}" alt="{{ name }}" class="avatar lg center">
+
+            <br>
+
+            <h3>{{ name }}</h3>
+            <p class="reg">{{ bio }}</p>
+        </div>
+    </div>
+</div>

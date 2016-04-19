@@ -1,0 +1,31 @@
+<div class="padded">
+    <div data-ng-show="vm.articles.length > 0" data-ng-repeat="article in vm.articles">
+        <a data-ui-sref="app.article({ username: article.author.username, articleSlug: article.slug })">
+            <h4>{{ article.title }}</h4>
+        </a>
+
+        <div class="tiny-description">
+            Unpublished {{ article.humanDeletedAt }}
+
+            &mdash;
+
+            <a href data-ng-click="vm.publish(article.slug)">
+                Publish
+            </a>
+
+            &mdash;
+
+            <a href data-ng-click="vm.forceDelete(article.slug)">
+                Delete
+            </a>
+        </div>
+
+        <hr>
+    </div>
+
+    <div data-ng-hide="vm.articles.length > 0">
+        <div class="empty-item text-center">
+            {{ vm.message }}
+        </div>
+    </div>
+</div>

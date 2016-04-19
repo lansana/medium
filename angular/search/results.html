@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-8">
+        <div data-ui-heading title="Stories"></div>
+        <div data-ng-show="vm.articles" data-articles data="{{ vm.articles }}"></div>
+        <div data-ng-hide="vm.articles.length > 0" class="empty-item">
+            <p class="reg">We couldn't find any articles.</p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div data-ui-affix class="sidebar paddedleft-container">
+
+            <div data-ui-heading title="Categories"></div>
+            <div data-ng-show="vm.categories" data-categories data="{{ vm.categories }}"></div>
+            <div data-ng-hide="vm.categories.length > 0" class="empty-item">
+                <p class="reg">We couldn't find any categories.</p>
+            </div>
+
+            <div data-ui-heading title="People"></div>
+            <div ng-show="vm.users.length > 0" data-ng-repeat="user in vm.users">
+                <div data-ui-profile-card data-user="{{ user }}"></div>
+            </div>
+            <div data-ng-hide="vm.users.length > 0" class="empty-item">
+                <p class="reg">We couldn't find any people.</p>
+            </div>
+
+        </div>
+    </div>
+</div>

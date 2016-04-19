@@ -1,0 +1,11 @@
+<div class="wide-layout">
+    <div data-ng-show="{{ vm.hasContent }}" class="single-column-layout md">
+        <div data-ui-heading title="Latest" data-bold="true"></div>
+
+        <div data-articles data="{{ vm.articles }}"></div>
+    </div>
+
+    <div data-ng-hide="{{ vm.hasContent }}" class="single-column-layout md empty-item">
+        <p class="reg">{{ vm.user.name }} doesn't have any activity yet.</p>
+    </div>
+</div>

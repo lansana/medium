@@ -1,0 +1,34 @@
+<div class="wide-layout">
+    <div class="single-column-layout">
+        <div class="article-container">
+            <div data-ui-profile-card-sm
+                 data-user="{{ vm.article.author }}"
+                 data-article-date="{{ vm.article.humanCreatedAt }}"
+                 data-view-count="{{ vm.article.viewCount }}"></div>
+
+            <div class="article-item-container">
+                <h1 data-view-title>{{ vm.article.title }}</h1>
+            </div>
+
+            <div data-ng-if="vm.article.image" class="article-item-container">
+                <img data-ng-src="/images/uploads/{{ vm.article.image.createdAt }}/{{ vm.article.image.path }}"
+                     alt="{{ vm.article.title }}"
+                     class="article-image img-responsive fadein">
+            </div>
+
+            <div class="article-body-container">
+                <div data-ng-bind-html="vm.article.body"></div>
+            </div>
+
+            <div class="categories-container">
+                <div data-categories data="{{ vm.article.categories }}"></div>
+            </div>
+
+            <div data-hearts data-count="{{ vm.article.likeCount }}" id="{{ vm.article.id }}"></div>
+
+            <hr>
+
+            <div data-ui-profile-card data-user="{{ vm.article.author }}"></div>
+        </div>
+    </div>
+</div>

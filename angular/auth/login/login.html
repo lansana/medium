@@ -1,0 +1,35 @@
+<div class="widget-container widget-container--auth">
+    <div data-ui-widget-header title="Log in"></div>
+
+    <div class="widget-content padded">
+        <form novalidate>
+            <div class="form-group">
+                <input class="form-control" placeholder="Email" type="email" data-ng-model="vm.email"
+                       data-ng-class="{'has-error-input': vm.errors.email}">
+
+                <div data-ng-repeat="error in vm.errors.email">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" placeholder="Password" type="password" data-ng-model="vm.password"
+                       data-ng-class="{'has-error-input': vm.errors.password}">
+
+                <div data-ng-repeat="error in vm.errors.password">
+                    <p class="has-error">{{ error.toString() }}</p>
+                </div>
+            </div>
+
+            <button class="btn btn-lg btn-primary" type="submit" data-ng-click="vm.login({email: vm.email, password: vm.password})">
+                Log in
+            </button>
+
+            <span><a href data-ui-sref="app.reset">Forgot password?</a></span>
+        </form>
+    </div>
+
+    <div class="widget-footer padded">
+        New around here? <a href data-ui-sref="app.signup">Sign up now &raquo;</a>
+    </div>
+</div>

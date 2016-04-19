@@ -1,0 +1,8 @@
+/vendor
+/node_modules
+Homestead.yaml
+.idea/
+.env
+.env.prod
+workspace.xml
+backup.sql
