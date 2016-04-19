@@ -1,1 +1,1 @@
-# Blog
+# Medium
