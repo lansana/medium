@@ -18,4 +18,4 @@ The whole app is a single page application, using a REST API built in PHP.
 
 Authentication is done using a JWT.
 
-The AngularJS is composed of modules, such that everything is done once and reused in multiple places.
+The front end is composed of modules, such that everything is done once and reused in multiple places. I also use Gulp for build automation.
