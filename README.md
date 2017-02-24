@@ -7,8 +7,15 @@ Check out the walkthrough [here](https://youtu.be/YI9ojL-MrtQ).
 ## Features
 - users
 - profiles (settings, update profile, etc.)
-- stories
-- drafts
-- categories
+- stories (drafts, published stories, unpublished stories, etc.)
+- categories 
 - global search (users, stories, categories, etc.)
 - and more
+
+## Architecture Overview
+
+The whole app is a single page application, using a REST API built in PHP.
+
+Authentication is done using a JWT.
+
+The AngularJS is composed of modules, such that everything is done once and reused in multiple places.
