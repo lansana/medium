@@ -2,6 +2,9 @@
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.8",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-ng-html2js": "^0.2.2",
+    "laravel-elixir-angular": "^1.0.1",
     "laravel-elixir-ng-annotate": "^1.0.1"
   },
   "dependencies": {
