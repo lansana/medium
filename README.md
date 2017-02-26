@@ -16,6 +16,8 @@ Check out the walkthrough [here](https://youtu.be/YI9ojL-MrtQ).
 
 The whole app is a single page application, using a REST API built in PHP.
 
+Data storage in MySQL.
+
 Authentication is done using a JWT.
 
 The front end is composed of modules, such that everything is done once and reused in multiple places. I also use Gulp for build automation.
