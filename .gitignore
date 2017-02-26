@@ -6,3 +6,5 @@ Homestead.yaml
 .env.prod
 workspace.xml
 backup.sql
+storage
+**/*.map
