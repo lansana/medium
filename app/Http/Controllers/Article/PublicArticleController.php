@@ -41,23 +41,19 @@ class PublicArticleController extends ApiController
     {
         $articles = Article::latest()->public()->with('images', 'categories', 'user')->paginator($request->input('page'));
 
-        if (count($articles)) {
-            // 'page' query string is available; add one to it for next page.
-            if ($request->input('page')) {
-                $nextPage = $request->input('page') + 1;
-            }
-            // 'page' query string param is not available. Default the next page to 2.
-            else {
-                $nextPage = 2;
-            }
-
-            return $this->respond([
-                'articles'    => $this->articleTransformer->transformCollection($articles),
-                'nextPageUrl' => '/articles?page=' . $nextPage
-            ]);
+        // 'page' query string is available; add one to it for next page.
+        if ($request->input('page')) {
+            $nextPage = $request->input('page') + 1;
+        }
+        // 'page' query string param is not available. Default the next page to 2.
+        else {
+            $nextPage = 2;
         }
 
-        return $this->respondWithMessage('No more pages to load!');
+        return $this->respond([
+            'articles'    => $this->articleTransformer->transformCollection($articles),
+            'nextPageUrl' => '/articles?page=' . $nextPage
+        ]);
     }
 
     /**
