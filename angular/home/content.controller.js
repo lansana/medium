@@ -37,9 +37,11 @@
 
         function addFeaturedCategories() {
             for (var i = 0; i < vm.articles.length; i++) {
-                for (var j = 0; j < vm.articles[i].categories.length; j++) {
-                    if (!alreadyExists(vm.articles[i].categories[j])) {
-                        vm.categories.push(vm.articles[i].categories[j]);
+                if (vm.articles[i].categories) {
+                    for (var j = 0; j < vm.articles[i].categories.length; j++) {
+                        if (!alreadyExists(vm.articles[i].categories[j])) {
+                            vm.categories.push(vm.articles[i].categories[j]);
+                        }
                     }
                 }
             }
