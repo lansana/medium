@@ -1,6 +1,11 @@
 <div class="row" data-ng-if="vm.articles">
     <div class="col-sm-8" data-ui-when-scrolled="vm.loadStories()">
         <div data-articles data="{{ vm.articles }}"></div>
+        <div ng-if="articles.length === 0">
+            <div class="widget-container padded text-center">
+                <h4 class="nomargin">There aren't any stories yet!</h4>
+            </div>
+        </div>
     </div>
     <div class="col-sm-4">
         <div data-ui-affix class="sidebar paddedleft-container">
