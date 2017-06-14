@@ -47,7 +47,7 @@
                 service
                     .get(loadStoriesUrl)
                     .then(function (res) {
-                        if (res.hasOwnProperty('message')) {
+                        if (res.articles.length === 0) {
                             hasMoreStoriesToLoad = false;
                         } else {
                             loadStoriesUrl = res.nextPageUrl;
