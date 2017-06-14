@@ -1024,9 +1024,10 @@ a:focus {
 
     .story--content {
       margin-left: 55px;
-      padding-bottom: 15px;
+      padding-bottom: 8px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       vertical-align: middle;
+      overflow: hidden;
 
       p:active,
       p:hover,
