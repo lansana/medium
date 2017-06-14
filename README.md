@@ -44,7 +44,15 @@ php artisan migrate
 
 You should now be able to start the server using `php artisan serve --port=80` and go to http://localhost to view the app!
 
-You can use `gulp watch` to rebuild the front end assets when developing, and `gulp --production` to bundle a production-ready asset bundle.
+## UI Development
+
+In order to develop in the UI, you will need to install the node modules"
+
+```bash
+npm install
+```
+
+Once you do that, you can use `gulp watch` to rebuild the front end assets when developing, and `gulp --production` to bundle a production-ready asset bundle.
 
 ## Architecture Overview
 
