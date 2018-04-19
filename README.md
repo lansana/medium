@@ -54,7 +54,7 @@ npm install
 
 Once you do that, you can use `gulp watch` to run a development server and listen for changes.
 
-## UI production build
+## UI Production Build
 
 Run `gulp --production` to bundle a production-ready asset bundle.
 
