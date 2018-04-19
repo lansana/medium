@@ -52,18 +52,22 @@ In order to develop in the UI, you will need to install the node modules"
 npm install
 ```
 
-Once you do that, you can use `gulp watch` to rebuild the front end assets when developing, and `gulp --production` to bundle a production-ready asset bundle.
+Once you do that, you can use `gulp watch` to run a development server and listen for changes.
+
+## UI production build
+
+Run `gulp --production` to bundle a production-ready asset bundle.
 
 ## Architecture Overview
 
-The whole app is a single page application, using a REST API built in PHP.
+The whole app is a single page application, using a REST API built in PHP (Laravel).
 
 Data storage in MySQL.
 
 Authentication is done using a JWT.
 
-The front end is composed of modules, such that everything is done once and reused in multiple places. I also use Gulp for build automation.
+Angular.JS front-end.
 
 ## Contributing
 
-Feel free to contribute to anything~ There are plenty of small bugs that I am aware of but have forgotten to take care of. Go ahead and make the first pull request to fix them. ;)
+Feel free to contribute to anything. There are plenty of small bugs that I am aware of but have forgotten to take care of. Go ahead and make the first pull request to fix them. ;)
